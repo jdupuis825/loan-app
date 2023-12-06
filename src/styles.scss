@@ -1,0 +1,46 @@
+
+@import './theme';
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// defined blue with class to use later
+.yellow {
+  color: #ECB939;
+}
+
+// defined green with class to use later
+.brown {
+  color: #726255;
+}
+
+// styling for attribution link
+.attribution-link {
+  text-decoration: none;
+  color: white;
+}
+
+// styling a hover for attribution link
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+// styling for card title icon
+.card-title-icon {
+  text-align: center;
+}
+
+// changes font size of card title icon
+.card-title-icon, mat-icon {
+  font-size: 72px;
+}
+
+// styling to center align text in container
+.align-center {
+  text-align: center;
+}

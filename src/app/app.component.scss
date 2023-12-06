@@ -1,0 +1,24 @@
+/**
+File: app.component.scss
+Name: Jocelyn Dupuis
+Date: 12/06/2023
+Description: css file for app component
+*/
+
+/**styling for logo*/
+.logo {
+  margin-top: 10px;
+  margin-left: 155px;
+}
+
+/**styling for main container*/
+.main-container {
+  padding-top: 25px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/**styling for card title*/
+mat-card-title {
+  text-align: center;
+}
