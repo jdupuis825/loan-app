@@ -20,19 +20,22 @@
             <mat-form-field fxFlex appearance="fill">
               <input type="text" name="txtLoan" required id="txtLoan" matInput formControlName="loan" />
             </mat-form-field>
+            <br />
 
             <!--form field for interest amount-->
             <mat-card-title>Interest Rate (ex: 3.5):</mat-card-title>
             <mat-form-field fxFlex appearance="fill">
               <input type="text" name="txtInterest" required id="txtInterest" matInput formControlName="interest" />
             </mat-form-field>
+            <br />
 
              <!--form field for number of years-->
              <mat-card-title>Number of Years:</mat-card-title>
             <mat-form-field fxFlex appearance="fill">
               <input type="text" name="numOfYears" required id="numOfYears" matInput formControlName="year" />
             </mat-form-field>
-            
+            <br />
+
             <button type="submit" [disabled]="" mat-raised-button color="primary">Calculate</button>
           </form>
         </mat-card-content>
