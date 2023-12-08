@@ -11,23 +11,24 @@
     <div fxFlex class="grade-form">
       <!--loan entry info-->
       <mat-card class="mat-elevation-z8">
-        <mat-card-title>Loan Amount</mat-card-title>
+        
         
         <mat-card-content>
-          <form fxLayout="column" fxLayoutGap="16px">
+          <form fxLayout="column" fxLayoutGap="14px">
              <!--form field for loan amount-->
+             <mat-card-title>Loan Amount:</mat-card-title>
             <mat-form-field fxFlex appearance="fill">
               <input type="text" name="txtLoan" required id="txtLoan" matInput formControlName="loan" />
             </mat-form-field>
 
             <!--form field for interest amount-->
-            <mat-card-title>Interest Rate (ex: 3.5</mat-card-title>
+            <mat-card-title>Interest Rate (ex: 3.5):</mat-card-title>
             <mat-form-field fxFlex appearance="fill">
               <input type="text" name="txtInterest" required id="txtInterest" matInput formControlName="interest" />
             </mat-form-field>
 
              <!--form field for number of years-->
-             <mat-card-title>Number of Years</mat-card-title>
+             <mat-card-title>Number of Years:</mat-card-title>
             <mat-form-field fxFlex appearance="fill">
               <input type="text" name="numOfYears" required id="numOfYears" matInput formControlName="year" />
             </mat-form-field>
