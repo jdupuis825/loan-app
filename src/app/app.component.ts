@@ -16,6 +16,7 @@ export class AppComponent {
   assignment: string;
 
   constructor() {
-    this.assignment = 'Welcome To The HufflePuff Loan Application!'
+    this.assignment = 'Welcome To The HufflePuff Loan Application!';
   }
+  
 }

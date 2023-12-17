@@ -4,57 +4,61 @@
 <!--Description: HTML file for home component-->
 
 <!--HTML file for home page-->
-<p>Hufflepuff Calculator Coming Soon!</p>
-
-<div fxLayout="row wrap" fxLayoutGap="20px">
+<h2 color="primary">Loan Calculator</h2>
+<div class="container">
+<div class="row-wrap" fxLayoutGap="40px">
     <!--displays loan form-->
     <div fxFlex class="grade-form">
       <!--loan entry info-->
       <mat-card class="mat-elevation-z8">
-        
+      
         
         <mat-card-content>
-          <form fxLayout="column" fxLayoutGap="14px">
-             <!--form field for loan amount-->
-             <mat-card-title>Loan Amount:</mat-card-title>
+          <form fxLayout="column" fxLayoutGap="12px" [formGroup]="loanForm" class="input-col">
+            <!--form field for loan amount-->
+            <mat-card-title>Loan Amount:</mat-card-title>
             <mat-form-field fxFlex appearance="fill">
-              <input type="text" name="txtLoan" required id="txtLoan" matInput formControlName="loan" />
+              <input type="number" name="loanAmount" required id="loanAmount" #loanAmount matInput formControlName="loanAmount" placeholder="$$$" />
             </mat-form-field>
             <br />
 
             <!--form field for interest amount-->
-            <mat-card-title>Interest Rate (ex: 3.5):</mat-card-title>
+            <mat-card-title>Interest Rate:</mat-card-title>
             <mat-form-field fxFlex appearance="fill">
-              <input type="text" name="txtInterest" required id="txtInterest" matInput formControlName="interest" />
+              <input type="number" name="interestRate" required id="interestRate" #interestRate matInput formControlName="interestRate" placeholder="ex: 4.6" />
             </mat-form-field>
             <br />
 
-             <!--form field for number of years-->
-             <mat-card-title>Number of Years:</mat-card-title>
+            <!--form field for number of years-->
+            <mat-card-title>Number of Years:</mat-card-title>
             <mat-form-field fxFlex appearance="fill">
-              <input type="text" name="numOfYears" required id="numOfYears" matInput formControlName="year" />
+              <input type="number" name="numberOfYears" required id="numberOfYears" #numberOfYears matInput formControlName="numberOfYears" placeholder="years"/>
             </mat-form-field>
             <br />
 
-            <button type="submit" [disabled]="" mat-raised-button color="primary">Calculate</button>
+            <button type="submit" [disabled]="!loanForm.valid" mat-raised-button color="primary" 
+            (click)="calculateLoan(loanAmount.value, interestRate.value, numberOfYears.value)">Calculate</button>
           </form>
         </mat-card-content>
       </mat-card>
     </div>
 
-    <!--displays loan summary-->
-    <div fxFlex class="loan-summary">
-        <mat-card-title class="yellow">Your monthly payment:</mat-card-title>
-        <br />
-        <mat-card-content>
-          <!--monthly payment calculations-->
-        </mat-card-content>
+   
 
-        <mat-card-title class="yellow">Interest:</mat-card-title>
-        <br />
-        <mat-card-content>
-          <!--interest calculations-->
-        </mat-card-content>
-    </div>
+ <!--displays loan summary-->
+ <div fxFlex class="loan-summary">
+  <mat-card class="results-container">
+    <mat-card-title class="yellow">Your monthly payment:</mat-card-title>
+    <br />
+    <mat-card-content>
+      <!--monthly payment calculations-->
+      <p class="calc-results">${{ payment }}</p>
+      <mat-card-title class="yellow">Interest Paid:</mat-card-title>
+      <br />
+      <!--interest calculations-->
+      <p class="calc-results">${{ interest }}</p>
+    </mat-card-content>
+  </mat-card>
 </div>
-
+</div>
+</div>

@@ -1,0 +1,30 @@
+/**
+File: home.component.scss
+Name: Jocelyn Dupuis
+Date: 12/15/2023
+Description: scss file for home component
+*/
+
+/**Styling for h2 element*/
+h2 {
+    color: #ecb939;
+    text-align: center;
+    font-size: 2em;
+}
+
+/**styling for button*/
+button {
+    color:#ecb939;
+}
+
+/**styling for container*/
+.container {
+    width: 80%;
+    margin-left: 10%;
+}
+
+/**Styling for results*/
+.calc-results {
+    font-size: 48px;
+    margin-bottom: 6%;
+}

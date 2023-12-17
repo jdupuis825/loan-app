@@ -24,22 +24,23 @@
 
 <br />
 
+
 <div fxLayout="row wrap">
 
-<div fxFlex>
+  <div fxFlex>
 
-  <!--main container-->
-  <mat-card class="main-container">
-    <mat-card-title class="yellow">{{ assignment }}</mat-card-title>
+    <!--main container-->
+    <mat-card class="main-container">
+      <mat-card-title>{{ assignment }}</mat-card-title>
 
-    <br />
-    <br />
+      <br />
+      <br />
 
-    <!--car content-->
-    <mat-card-content>
-      <!--router outlet-->
-      <router-outlet></router-outlet>
-    </mat-card-content>
-  </mat-card>
-</div>
+      <!--card content-->
+      <mat-card-content>
+        <!--router outlet-->
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
